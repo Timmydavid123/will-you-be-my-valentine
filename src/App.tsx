@@ -1,5 +1,9 @@
 "use client";
 import { useState } from "react";
+import img1 from "./assets/1.jpeg";
+import img2 from "./assets/2.jpeg";
+import img3 from "./assets/3.jpeg";
+import img4 from "./assets/4.jpeg";
 
 export default function Page() {
   const [noCount, setNoCount] = useState(0);
@@ -37,16 +41,21 @@ export default function Page() {
     <div className="-mt-16 flex h-screen flex-col items-center justify-center">
       {yesPressed ? (
         <>
-          <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
-          <div className="my-4 text-4xl font-bold">WOOOOOO!!! I love you pookie!! ;))</div>
+           <div className="grid grid-cols-2 gap-2 w-[300px]">
+      <img src={img1} alt="Image 1" className="w-full h-full object-cover" />
+      <img src={img2} alt="Image 2" className="w-full h-full object-cover" />
+      <img src={img3} alt="Image 3" className="w-full h-full object-cover" />
+      <img src={img4} alt="Image 4" className="w-full h-full object-cover" />
+    </div>
+          <div className="my-4 text-4xl font-bold">WOOOOOO!!! I love you pookie!! ;</div>
         </>
       ) : (
         <>
-          <img
-            className="h-[200px]"
-            src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"
+          <img 
+            className="h-[400px]"
+            src={img2} alt="Image 1"
           />
-          <h1 className="my-4 text-4xl">Will you be my Valentine?</h1>
+          <h1 className="my-4 text-4xl">Will you be my Valentine Favour?</h1>
           <div className="flex items-center">
             <button
               className={`mr-4 rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700`}
